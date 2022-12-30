@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 :root{
   --bg-color:#131722;
-  --main-font:font-family:'Montserrat+Alternates',sans-serif;
+  --main-font:'Montserrat+Alternates',sans-serif;
   --light-bg:#24baef;
   --font-color:#fff
 }

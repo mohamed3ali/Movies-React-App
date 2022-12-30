@@ -22,7 +22,7 @@ const [errorList ,setErrorList]= useState([]);
   }
   async function sentLoginDataToApi(){
    let {data} = await axios.post(`https://sticky-note-fe.vercel.app/signin`,user);
-   if(data.message == 'success'){
+   if(data.message === 'success'){
     setLoading(false);
     localStorage.setItem('userToken', data.token);
     saveUserData();
@@ -67,7 +67,7 @@ const [errorList ,setErrorList]= useState([]);
   <label htmlFor='password'>password:</label>
   <input  onChange={getUserData} type="password" className="form-control my-input my-2" name="password" id="password"/>
 <button className='btn btn-info'>
-  {loading == true? <i className='fas fa-spinner fa-spin'></i>:'Login'}</button>
+  {loading === true? <i className='fas fa-spinner fa-spin'></i>:'Login'}</button>
  </form>
  </>
 }

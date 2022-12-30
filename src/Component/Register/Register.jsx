@@ -24,7 +24,7 @@ const [errorList ,setErrorList]= useState([]);
   }
   async function sentRegisterDataToApi(){
    let {data} = await axios.post(`https://sticky-note-fe.vercel.app/signup`,user);
-   if(data.message == 'success'){
+   if(data.message === 'success'){
     setLoading(false)
     navigate('/login')
    }else
@@ -75,7 +75,7 @@ const [errorList ,setErrorList]= useState([]);
   <label htmlFor='password'>password:</label>
   <input  onChange={getUserData} type="password" className="form-control my-input my-2" name="password" id="password"/>
 <button className='btn btn-info'>
-  {loading == true? <i className='fas fa-spinner fa-spin'></i>:'Register'}</button>
+  {loading === true? <i className='fas fa-spinner fa-spin'></i>:'Register'}</button>
  </form>
  </>
 }
